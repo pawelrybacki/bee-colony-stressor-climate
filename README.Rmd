@@ -46,3 +46,37 @@ a) your .Rprofile file with the entry options(noaakey = "your-noaa-token"), or
 
 b) your .Renviron file with the entry NOAA_KEY=your-noaa-token
 
+## NOAA data exploration
+
+```{r explore rnoaa 1}
+# Show all location categories (first 25 results).
+ncdc_locs_cats()
+# Fetch all available U.S. States.
+ncdc_locs(locationcategoryid='ST', limit=52)
+```
+
+```{r explore rnoaa 2}
+# See data categories available for Nevada (locationid = "FIPS:32"), for example.
+ncdc_datacats(locationid = "FIPS:32", limit = 100)
+```
+
+Note potential datasets of interest:
+Precipitation - PRCP
+Evaporation - EVAP
+Pressure - PRES
+Sky cover & clouds - SKY
+Sunshine - SUN
+Air Temperature - TEMP
+Water - WATER
+Wind - WIND
+Weather Type - WXTYPE
+
+Autumn Precipitation - AUPRCP
+Autumn Temperature - AUTEMP
+Spring Precipitation - SPPRCP
+Spring Temperature - SPTEMP
+Summer Precipitation - SUPRCP
+Summer Temperature - SUTEMP
+Winter Precipitation - WIPRCP
+Winter Temperature - WITEMP
+
