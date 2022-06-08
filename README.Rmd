@@ -80,3 +80,12 @@ Summer Temperature - SUTEMP
 Winter Precipitation - WIPRCP
 Winter Temperature - WITEMP
 
+```{r explore rnoaa 3}
+# explore datasets based on a particular category (temperature) and for a particular state (Nevada).
+ncdc_datasets(datacategoryid = "TEMP", locationid = "FIPS:32", limit = 100)
+
+# Get a list of variables (datatypes) from a particular dataset (GSOM, Global Summary of the Month), based on particular categories (temperature and precipitation) and for a particular state (Nevada).
+ncdc_datatypes(datasetid = "GSOM", datacategoryid = "TEMP", locationid = "FIPS:32", limit = 100)
+ncdc_datatypes(datasetid = "GSOM", datacategoryid = "PRCP", locationid = "FIPS:32", limit = 100)
+
+```

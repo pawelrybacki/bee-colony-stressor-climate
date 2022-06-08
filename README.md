@@ -251,3 +251,109 @@ Autumn Precipitation - AUPRCP Autumn Temperature - AUTEMP Spring
 Precipitation - SPPRCP Spring Temperature - SPTEMP Summer
 Precipitation - SUPRCP Summer Temperature - SUTEMP Winter
 Precipitation - WIPRCP Winter Temperature - WITEMP
+
+    # explore datasets based on a particular category (temperature) and for a particular state (Nevada).
+    ncdc_datasets(datacategoryid = "TEMP", locationid = "FIPS:32", limit = 100)
+
+    ## $meta
+    ## $meta$offset
+    ## [1] 1
+    ## 
+    ## $meta$count
+    ## [1] 11
+    ## 
+    ## $meta$limit
+    ## [1] 100
+    ## 
+    ## 
+    ## $data
+    ##                     uid    mindate    maxdate                        name
+    ## 1  gov.noaa.ncdc:C00861 1763-01-01 2022-06-06             Daily Summaries
+    ## 2  gov.noaa.ncdc:C00946 1763-01-01 2022-06-01 Global Summary of the Month
+    ## 3  gov.noaa.ncdc:C00947 1763-01-01 2022-01-01  Global Summary of the Year
+    ## 4  gov.noaa.ncdc:C00345 1991-06-05 2022-06-05    Weather Radar (Level II)
+    ## 5  gov.noaa.ncdc:C00708 1994-05-20 2022-06-05   Weather Radar (Level III)
+    ## 6  gov.noaa.ncdc:C00821 2010-01-01 2010-01-01     Normals Annual/Seasonal
+    ## 7  gov.noaa.ncdc:C00823 2010-01-01 2010-12-31               Normals Daily
+    ## 8  gov.noaa.ncdc:C00824 2010-01-01 2010-12-31              Normals Hourly
+    ## 9  gov.noaa.ncdc:C00822 2010-01-01 2010-12-01             Normals Monthly
+    ## 10 gov.noaa.ncdc:C00505 1970-05-12 2014-01-01     Precipitation 15 Minute
+    ## 11 gov.noaa.ncdc:C00313 1900-01-01 2014-01-01        Precipitation Hourly
+    ##    datacoverage         id
+    ## 1          1.00      GHCND
+    ## 2          1.00       GSOM
+    ## 3          1.00       GSOY
+    ## 4          0.95    NEXRAD2
+    ## 5          0.95    NEXRAD3
+    ## 6          1.00 NORMAL_ANN
+    ## 7          1.00 NORMAL_DLY
+    ## 8          1.00 NORMAL_HLY
+    ## 9          1.00 NORMAL_MLY
+    ## 10         0.25  PRECIP_15
+    ## 11         1.00 PRECIP_HLY
+    ## 
+    ## attr(,"class")
+    ## [1] "ncdc_datasets"
+
+    # Get a list of variables (datatypes) from a particular dataset (GSOM, Global Summary of the Month), based on particular categories (temperature and precipitation) and for a particular state (Nevada).
+    ncdc_datatypes(datasetid = "GSOM", datacategoryid = "TEMP", locationid = "FIPS:32", limit = 100)
+
+    ## $meta
+    ##   offset count limit
+    ## 1      1     7   100
+    ## 
+    ## $data
+    ##      mindate    maxdate                                        name
+    ## 1 1763-01-01 2022-05-01          Cooling Degree Days Season to Date
+    ## 2 1763-01-01 2022-05-01 Extreme minimum temperature for the period.
+    ## 3 1763-01-01 2022-05-01 Extreme maximum temperature for the period.
+    ## 4 1763-07-01 2022-05-01          Heating Degree Days Season to Date
+    ## 5 1763-01-01 2022-05-01                        Average Temperature.
+    ## 6 1763-01-01 2022-05-01                         Maximum temperature
+    ## 7 1763-01-01 2022-05-01                         Minimum temperature
+    ##   datacoverage   id
+    ## 1            1 CDSD
+    ## 2            1 EMNT
+    ## 3            1 EMXT
+    ## 4            1 HDSD
+    ## 5            1 TAVG
+    ## 6            1 TMAX
+    ## 7            1 TMIN
+    ## 
+    ## attr(,"class")
+    ## [1] "ncdc_datatypes"
+
+    ncdc_datatypes(datasetid = "GSOM", datacategoryid = "PRCP", locationid = "FIPS:32", limit = 100)
+
+    ## $meta
+    ##   offset count limit
+    ## 1      1     7   100
+    ## 
+    ## $data
+    ##      mindate    maxdate
+    ## 1 1863-12-01 2022-05-01
+    ## 2 1840-05-01 2022-05-01
+    ## 3 1863-12-01 2022-05-01
+    ## 4 1840-05-01 2022-05-01
+    ## 5 1781-01-01 2022-05-01
+    ## 6 1781-01-01 2022-05-01
+    ## 7 1840-05-01 2022-05-01
+    ##                                                           name datacoverage
+    ## 1 Number days with snow depth > 1 inch(25.4mm) for the period.            1
+    ## 2                        Number days with snow depth > 1 inch.            1
+    ## 3                   Extreme maximum snow depth for the period.            1
+    ## 4                     Extreme maximum snowfall for the period.            1
+    ## 5                Extreme maximum precipitation for the period.            1
+    ## 6                                                Precipitation            1
+    ## 7                                                     Snowfall            1
+    ##     id
+    ## 1 DSND
+    ## 2 DSNW
+    ## 3 EMSD
+    ## 4 EMSN
+    ## 5 EMXP
+    ## 6 PRCP
+    ## 7 SNOW
+    ## 
+    ## attr(,"class")
+    ## [1] "ncdc_datatypes"
