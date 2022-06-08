@@ -357,3 +357,53 @@ Precipitation - WIPRCP Winter Temperature - WITEMP
     ## 
     ## attr(,"class")
     ## [1] "ncdc_datatypes"
+
+## Prepare dataframes with states, years, and months of interest
+
+In a format suitable for use with the `rnoaa` package.
+
+    # Sources that inspired the code below:
+    # https://stackoverflow.com/questions/29402528/append-data-frames-together-in-a-for-loop
+    # https://stackoverflow.com/questions/53735450/using-a-loop-to-cycle-though-api-calls-in-r
+    # https://www.projectpro.io/recipes/append-output-from-for-loop-dataframe-r
+
+    # Store all state codes in a dataframe
+    state_list <- ncdc_locs(locationcategoryid='ST', limit=52)$data %>% 
+      dplyr::select(name, id) %>% 
+      dplyr::rename(state = name, state_id = id)
+
+    # Store all years in a dataframe
+    years <- tribble(
+      ~year, ~x,
+      "2015", 1,
+      "2016", 1,
+      "2017", 1,
+      "2018", 1,
+      "2019", 1,
+      "2020", 1,
+      "2021", 1
+    )
+
+    # Store all start and end dates requested in a dataframe
+    months1 <- data.frame()
+
+    for(i in 1:nrow(years)) {
+      y = paste0(years$year[i])
+      output <- tribble(
+      ~start_date,  ~end_date,
+      paste0(y,"-01-01"), paste0(y,"-01-31"),
+      paste0(y,"-02-01"), paste0(y,"-03-31"),
+      paste0(y,"-04-01"), paste0(y,"-06-30"),
+      paste0(y,"-07-01"), paste0(y,"-08-31"),
+      paste0(y,"-09-01"), paste0(y,"-10-31"),
+      paste0(y,"-11-01"), paste0(y,"-12-31"),
+    )
+      months1 = rbind(months1, output) 
+    }
+
+## Download temperature data
+
+This chunk may take a lot of time and internet data to complete. Thus,
+it runs a separate script: `download_temperature_data.R`.
+
+    source("download_temperature_data.R", local = knitr::knit_global())

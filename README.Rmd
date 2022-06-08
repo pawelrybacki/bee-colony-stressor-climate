@@ -101,10 +101,8 @@ In a format suitable for use with the `rnoaa` package.
 # https://www.projectpro.io/recipes/append-output-from-for-loop-dataframe-r
 
 # Store all state codes in a dataframe
-state_list <- ncdc_locs(locationcategoryid='ST', limit=52)$data
-
-state_list <- state_list %>% 
-  select(name, id) %>% 
+state_list <- ncdc_locs(locationcategoryid='ST', limit=52)$data %>% 
+  dplyr::select(name, id) %>% 
   dplyr::rename(state = name, state_id = id)
 ```
 
@@ -138,4 +136,15 @@ for(i in 1:nrow(years)) {
   months1 = rbind(months1, output) 
 }
 ```
+
+## Download temperature data
+
+This chunk may take a lot of time and internet data to complete. Thus, it runs a separate script: `download_temperature_data.R`.
+
+```{r download temperature data, eval=FALSE, include=TRUE}
+source("download_temperature_data.R", local = knitr::knit_global())
+```
+
+
+
 
