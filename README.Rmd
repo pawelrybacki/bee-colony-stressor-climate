@@ -37,3 +37,12 @@ library(lubridate)
 noaakey <- Sys.getenv("NOAA_KEY")
 stressor <- read_csv('https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2022/2022-01-11/stressor.csv')
 ```
+
+## About the use of the `rnoaa` package
+
+To use some components of the package, including the ones related to this project, the user must get an API key (aka, token) from https://www.ncdc.noaa.gov/cdo-web/token. The token must be passed in some API requests (functions of the packages) as an argument. Rather than hard-coding the token, it's safer to pass it as a variable stored in:
+
+a) your .Rprofile file with the entry options(noaakey = "your-noaa-token"), or
+
+b) your .Renviron file with the entry NOAA_KEY=your-noaa-token
+
