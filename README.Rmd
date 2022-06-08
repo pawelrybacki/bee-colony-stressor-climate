@@ -24,3 +24,16 @@ More specifically, this script uses `rnoaa` to download, transform, and merge da
 ```{r setup, include = FALSE}
 knitr::opts_chunk$set(echo = TRUE, message = FALSE)
 ```
+
+```{r install-libraries, include = FALSE}
+# install if necessary
+# install.packages("rnoaa", "tidyverse", "doBy", "lubridate")
+library(tidyverse)
+library(rnoaa)
+library(doBy)
+library(lubridate)
+
+#https://stackoverflow.com/questions/66656313/downloading-noaa-data
+noaakey <- Sys.getenv("NOAA_KEY")
+stressor <- read_csv('https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2022/2022-01-11/stressor.csv')
+```
