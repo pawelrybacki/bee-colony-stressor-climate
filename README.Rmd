@@ -1,0 +1,26 @@
+---
+title: "Combine Data on Bee Colony Stressors and Climate"
+author: "Paweł Rybacki"
+date: '2022-04-22'
+output: md_document
+---
+
+This file was originally a part of a team project whose goal was to establish relationships among variables related to bee colony losses, bee colony stressors, and climate. 
+
+The data describing bee colonies come from the Bee Colonies dataset from [TidyTuesday](https://github.com/rfordatascience/tidytuesday/blob/master/data/2022/2022-01-11/readme.md#bee-colonies). This source has two datasets – related to colonies and stressors. The stressor dataset has 5 variables and 7,332 observations. Here are the explanations of variables in these two subsets:
+
+| Variable   | Class     | Description                                                                                                                             |
+|------------|-----------|-----------------------------------------------------------------------------------------------------------------------------------------|
+| year       | character | Year                                                                                                                                    |
+| months     | character | Month range                                                                                                                             |
+| state      | character | State Name (note there is United States and Other States)                                                                               |
+| stressor   | character | Stress type                                                                                                                             |
+| stress_pct | double    | Percent of colonies affected by stressors anytime during the quarter, colony can be affected by multiple stressors during same quarter |
+
+This file uses the TidyTuesday Bee Colonies stressors dataset and downloads data on climate from the National Climatic Data Center using API through the `rnoaa` package, an R interface to NOAA climate data.
+
+More specifically, this script uses `rnoaa` to download, transform, and merge data so that the temperature, precipitation, and bee colony stressor types and effects for all 50 states (if applicable) and all quarters of the years 2015-2021 are present in one final dataset called `stressor_climate.csv`. 
+
+```{r setup, include = FALSE}
+knitr::opts_chunk$set(echo = TRUE, message = FALSE)
+```
