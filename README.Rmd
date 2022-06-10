@@ -207,6 +207,7 @@ source("download_precipitation_data.R", local = knitr::knit_global())
 
 ```{r combine precipitation data from all states}
 # https://statisticsglobe.com/merge-csv-files-in-r
+unlink(c("prcp_data/prcp_all_states.csv"))
 prcp <- list.files(path = "prcp_data/",  # Identify all CSV files
                        pattern = "*.csv", full.names = TRUE) %>% 
   lapply(read_csv) %>% bind_rows %>% select(-1) %>% dplyr::rename(prcp_mean = value.mean, prcp_sd = value.sd)
@@ -215,3 +216,16 @@ prcp
 write.csv(prcp, paste0("prcp_data/prcp_", "all_states", ".csv"))
 ```
 
+## Take quarter means of precipitation data.
+
+```{r take quarter means of precipitation data}
+prcp_q <- prcp %>%
+  mutate(quarter = paste0(substring(year(date),3,4),"/0",quarter(date))) 
+
+prcp_q <- summaryBy(prcp_mean ~ quarter + state, FUN=c(mean,sd), data = prcp_q)
+
+prcp_q <- prcp_q %>% dplyr::rename(prcp_mean = prcp_mean.mean, prcp_sd = prcp_mean.sd)
+
+write.csv(prcp_q, paste0("prcp_data/prcp_q_", "all_states", ".csv"))
+unlink("prcp_data/prcp_all_states.csv")
+```
