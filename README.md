@@ -439,6 +439,7 @@ it runs a separate script: `download_temperature_data.R`.
 
     # https://statisticsglobe.com/merge-csv-files-in-r
     # combine temperature data from all states into a single file
+    unlink(c("temp_data/avgtemp_all_states.csv", "temp_data/avg_temp_q_all_states.csv"))
     avg_temp <- list.files(path = "temp_data/",  # Identify all CSV files
                            pattern = "*.csv", full.names = TRUE) %>% 
       lapply(read_csv) %>% bind_rows %>% dplyr::select(-1) %>% dplyr::rename(temp_mean = value.mean, temp_sd = value.sd)
@@ -461,3 +462,20 @@ it runs a separate script: `download_temperature_data.R`.
     ## # … with 4,267 more rows
 
     write.csv(avg_temp, paste0("temp_data/avgtemp_", "all_states", ".csv"))
+
+## Take quarter means of temperature data.
+
+    # based on the data in the existing dataframe, attribute a quarter to each year/month/state
+    avg_temp_q <- avg_temp %>%
+      mutate(quarter = paste0(substring(year(date),3,4),"/0",quarter(date))) 
+
+    # https://stats.oarc.ucla.edu/r/faq/how-can-i-collapse-my-data-in-r/
+    # Take the mean and standard deviation of all months within a quarter/state using a function somewhat familiar to Stata users:
+    avg_temp_q <- summaryBy(temp_mean ~ quarter + state, FUN=c(mean,sd), data = avg_temp_q)
+
+    # rename for clarity
+    avg_temp_q <- avg_temp_q %>% dplyr::rename(temp_mean = temp_mean.mean, temp_sd = temp_mean.sd)
+
+    # save
+    write.csv(avg_temp_q, paste0("temp_data/avg_temp_q_", "all_states", ".csv"))
+    unlink("temp_data/avgtemp_all_states.csv")
