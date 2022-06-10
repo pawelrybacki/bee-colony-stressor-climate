@@ -119,8 +119,8 @@ In a format suitable for use with the `rnoaa` package.
 
 # Store all state codes in a dataframe
 state_list <- ncdc_locs(locationcategoryid='ST', limit=52)$data %>% 
-  dplyr::select(name, id) %>% 
-  dplyr::rename(state = name, state_id = id)
+  select(name, id) %>% 
+  rename(state = name, state_id = id)
 ```
 
 ```{r loop downloading preparation, 2}
@@ -158,7 +158,7 @@ for(i in 1:nrow(years)) {
 
 This chunk may take a lot of time and internet data to complete. Thus, it runs a separate script: `download_temperature_data.R,` not run while knitting the markdown file..
 
-```{r download temperature data, eval=FALSE, include=TRUE}
+```{r download temperature data, eval=TRUE, include=TRUE}
 source("download_temperature_data.R", local = knitr::knit_global())
 ```
 
@@ -199,9 +199,19 @@ unlink("temp_data/avgtemp_all_states.csv")
 
 Similarly to the one downloading temperature data, this chunk may take a lot of time and internet data to complete. Thus, it runs a separate script, `download_precipitation_data.R,` not run while knitting the markdown file.
 
-```{r download precipitation data, eval=FALSE, include=TRUE}
+```{r download precipitation data, eval=TRUE, include=TRUE}
 source("download_precipitation_data.R", local = knitr::knit_global())
 ```
 
+## Combine precipitation data from all states.
 
+```{r combine precipitation data from all states}
+# https://statisticsglobe.com/merge-csv-files-in-r
+prcp <- list.files(path = "prcp_data/",  # Identify all CSV files
+                       pattern = "*.csv", full.names = TRUE) %>% 
+  lapply(read_csv) %>% bind_rows %>% select(-1) %>% dplyr::rename(prcp_mean = value.mean, prcp_sd = value.sd)
+
+prcp 
+write.csv(prcp, paste0("prcp_data/prcp_", "all_states", ".csv"))
+```
 

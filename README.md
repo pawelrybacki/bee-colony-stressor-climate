@@ -396,8 +396,8 @@ In a format suitable for use with the `rnoaa` package.
 
     # Store all state codes in a dataframe
     state_list <- ncdc_locs(locationcategoryid='ST', limit=52)$data %>% 
-      dplyr::select(name, id) %>% 
-      dplyr::rename(state = name, state_id = id)
+      select(name, id) %>% 
+      rename(state = name, state_id = id)
 
     # Store all years in a dataframe
     years <- tribble(
@@ -435,6 +435,60 @@ it runs a separate script: `download_temperature_data.R,` not run while
 knitting the markdown file..
 
     source("download_temperature_data.R", local = knitr::knit_global())
+
+    ## Warning in dir.create("temp_data"): 'temp_data' already exists
+
+    ## [1] "Alabama"
+    ## [1] "Alaska"
+    ## [1] "Arizona"
+    ## [1] "Arkansas"
+    ## [1] "California"
+    ## [1] "Colorado"
+    ## [1] "Connecticut"
+    ## [1] "Delaware"
+    ## [1] "District of Columbia"
+    ## [1] "Florida"
+    ## [1] "Georgia"
+    ## [1] "Hawaii"
+    ## [1] "Idaho"
+    ## [1] "Illinois"
+    ## [1] "Indiana"
+    ## [1] "Iowa"
+    ## [1] "Kansas"
+    ## [1] "Kentucky"
+    ## [1] "Louisiana"
+    ## [1] "Maine"
+    ## [1] "Maryland"
+    ## [1] "Massachusetts"
+    ## [1] "Michigan"
+    ## [1] "Minnesota"
+    ## [1] "Mississippi"
+    ## [1] "Missouri"
+    ## [1] "Montana"
+    ## [1] "Nebraska"
+    ## [1] "Nevada"
+    ## [1] "New Hampshire"
+    ## [1] "New Jersey"
+    ## [1] "New Mexico"
+    ## [1] "New York"
+    ## [1] "North Carolina"
+    ## [1] "North Dakota"
+    ## [1] "Ohio"
+    ## [1] "Oklahoma"
+    ## [1] "Oregon"
+    ## [1] "Pennsylvania"
+    ## [1] "Rhode Island"
+    ## [1] "South Carolina"
+    ## [1] "South Dakota"
+    ## [1] "Tennessee"
+    ## [1] "Texas"
+    ## [1] "Utah"
+    ## [1] "Vermont"
+    ## [1] "Virginia"
+    ## [1] "Washington"
+    ## [1] "West Virginia"
+    ## [1] "Wisconsin"
+    ## [1] "Wyoming"
 
 ## Combine temperature data from all states.
 
@@ -489,3 +543,83 @@ script, `download_precipitation_data.R,` not run while knitting the
 markdown file.
 
     source("download_precipitation_data.R", local = knitr::knit_global())
+
+    ## Warning in dir.create("prcp_data"): 'prcp_data' already exists
+
+    ## [1] "Alabama"
+    ## [1] "Alaska"
+    ## [1] "Arizona"
+    ## [1] "Arkansas"
+    ## [1] "California"
+    ## [1] "Colorado"
+    ## [1] "Connecticut"
+    ## [1] "Delaware"
+    ## [1] "District of Columbia"
+    ## [1] "Florida"
+    ## [1] "Georgia"
+    ## [1] "Hawaii"
+    ## [1] "Idaho"
+    ## [1] "Illinois"
+    ## [1] "Indiana"
+    ## [1] "Iowa"
+    ## [1] "Kansas"
+    ## [1] "Kentucky"
+    ## [1] "Louisiana"
+    ## [1] "Maine"
+    ## [1] "Maryland"
+    ## [1] "Massachusetts"
+    ## [1] "Michigan"
+    ## [1] "Minnesota"
+    ## [1] "Mississippi"
+    ## [1] "Missouri"
+    ## [1] "Montana"
+    ## [1] "Nebraska"
+    ## [1] "Nevada"
+    ## [1] "New Hampshire"
+    ## [1] "New Jersey"
+    ## [1] "New Mexico"
+    ## [1] "New York"
+    ## [1] "North Carolina"
+    ## [1] "North Dakota"
+    ## [1] "Ohio"
+    ## [1] "Oklahoma"
+    ## [1] "Oregon"
+    ## [1] "Pennsylvania"
+    ## [1] "Rhode Island"
+    ## [1] "South Carolina"
+    ## [1] "South Dakota"
+    ## [1] "Tennessee"
+    ## [1] "Texas"
+    ## [1] "Utah"
+    ## [1] "Vermont"
+    ## [1] "Virginia"
+    ## [1] "Washington"
+    ## [1] "West Virginia"
+    ## [1] "Wisconsin"
+    ## [1] "Wyoming"
+
+## Combine precipitation data from all states.
+
+    # https://statisticsglobe.com/merge-csv-files-in-r
+    prcp <- list.files(path = "prcp_data/",  # Identify all CSV files
+                           pattern = "*.csv", full.names = TRUE) %>% 
+      lapply(read_csv) %>% bind_rows %>% select(-1) %>% dplyr::rename(prcp_mean = value.mean, prcp_sd = value.sd)
+
+    prcp 
+
+    ## # A tibble: 4,152 × 4
+    ##    date                prcp_mean prcp_sd state  
+    ##    <dttm>                  <dbl>   <dbl> <chr>  
+    ##  1 2015-01-01 00:00:00     110.     27.0 Alabama
+    ##  2 2015-02-01 00:00:00     102.     25.5 Alabama
+    ##  3 2015-03-01 00:00:00     119.     37.2 Alabama
+    ##  4 2015-04-01 00:00:00     197.     57.3 Alabama
+    ##  5 2015-05-01 00:00:00     107.     41.3 Alabama
+    ##  6 2015-06-01 00:00:00      86.0    39.3 Alabama
+    ##  7 2015-07-01 00:00:00     129.     41.3 Alabama
+    ##  8 2015-08-01 00:00:00     149.     53.5 Alabama
+    ##  9 2015-09-01 00:00:00      61.6    54.4 Alabama
+    ## 10 2015-10-01 00:00:00      75.5    28.6 Alabama
+    ## # … with 4,142 more rows
+
+    write.csv(prcp, paste0("prcp_data/prcp_", "all_states", ".csv"))
