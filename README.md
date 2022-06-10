@@ -431,7 +431,8 @@ In a format suitable for use with the `rnoaa` package.
 ## Download temperature data
 
 This chunk may take a lot of time and internet data to complete. Thus,
-it runs a separate script: `download_temperature_data.R`.
+it runs a separate script: `download_temperature_data.R,` not run while
+knitting the markdown file..
 
     source("download_temperature_data.R", local = knitr::knit_global())
 
@@ -479,3 +480,12 @@ it runs a separate script: `download_temperature_data.R`.
     # save
     write.csv(avg_temp_q, paste0("temp_data/avg_temp_q_", "all_states", ".csv"))
     unlink("temp_data/avgtemp_all_states.csv")
+
+## Download precipitation data
+
+Similarly to the one downloading temperature data, this chunk may take a
+lot of time and internet data to complete. Thus, it runs a separate
+script, `download_precipitation_data.R,` not run while knitting the
+markdown file.
+
+    source("download_precipitation_data.R", local = knitr::knit_global())
