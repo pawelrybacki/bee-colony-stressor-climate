@@ -22,6 +22,7 @@ This file uses the TidyTuesday Bee Colonies stressors dataset and downloads data
 More specifically, this script uses `rnoaa` to download, transform, and merge data so that the temperature, precipitation, and bee colony stressor types and effects for all 50 states (if applicable) and all quarters of the years 2015-2021 are present in one final dataset called `stressor_climate.csv`. 
 
 ```{r setup, include = FALSE}
+knitr::opts_knit$set(root.dir = "~/Documents/GitHub/bee-colony-stressor-climate/")
 knitr::opts_chunk$set(echo = TRUE, message = FALSE)
 ```
 
@@ -118,7 +119,8 @@ In a format suitable for use with the `rnoaa` package.
 # https://www.projectpro.io/recipes/append-output-from-for-loop-dataframe-r
 
 # Store all state codes in a dataframe
-state_list <- ncdc_locs(locationcategoryid='ST', limit=52)$data %>% 
+state_list <- ncdc_locs(locationcategoryid='ST', limit=52)$data 
+state_list <- state_list %>% 
   select(name, id) %>% 
   rename(state = name, state_id = id)
 ```
@@ -207,7 +209,7 @@ source("download_precipitation_data.R", local = knitr::knit_global())
 
 ```{r combine precipitation data from all states}
 # https://statisticsglobe.com/merge-csv-files-in-r
-unlink(c("prcp_data/prcp_all_states.csv"))
+unlink(c("prcp_data/prcp_q_all_states.csv", "prcp_data/prcp_all_states.csv"))
 prcp <- list.files(path = "prcp_data/",  # Identify all CSV files
                        pattern = "*.csv", full.names = TRUE) %>% 
   lapply(read_csv) %>% bind_rows %>% select(-1) %>% dplyr::rename(prcp_mean = value.mean, prcp_sd = value.sd)
@@ -234,7 +236,7 @@ unlink("prcp_data/prcp_all_states.csv")
 
 ```{r Merge temperature, precitipation, stressor}
 stressor <- stressor %>% 
-  mutate(quarter_year =
+  mutate(quarter =
     case_when(
       months == "January-March" ~ paste0(substr(year, 3,4), "/01"),
       months == "April-June" ~ paste0(substr(year, 3,4), "/02"),
@@ -251,9 +253,9 @@ stressor_climate <- stressor_climate %>%
                              months == "April-June" ~ 2, 
                              months == "July-September" ~ 3, 
                              months == "October-December" ~ 4)) %>%
-  select(-`...1`, -months, -temp_sd, -prcp_sd) %>%
-  arrange(quarter_year) %>%
-  relocate(quarter_year, year, quarter, state, stressor, stress_pct, temp_mean, prcp_mean)
+  select(-months, -temp_sd, -prcp_sd) %>%
+  arrange(quarter) %>%
+  relocate(quarter, year, quarter, state, stressor, stress_pct, temp_mean, prcp_mean)
 
 write.csv(stressor_climate, "stressor_climate.csv")
 ```

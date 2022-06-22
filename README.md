@@ -126,57 +126,57 @@ in:
     ## 
     ## $data
     ##       mindate    maxdate                 name datacoverage      id
-    ## 1  1888-02-01 2022-06-09              Alabama            1 FIPS:01
-    ## 2  1893-09-01 2022-06-09               Alaska            1 FIPS:02
-    ## 3  1867-08-01 2022-06-09              Arizona            1 FIPS:04
-    ## 4  1871-07-01 2022-06-09             Arkansas            1 FIPS:05
-    ## 5  1850-10-01 2022-06-09           California            1 FIPS:06
-    ## 6  1852-10-01 2022-06-09             Colorado            1 FIPS:08
-    ## 7  1884-11-01 2022-06-09          Connecticut            1 FIPS:09
-    ## 8  1893-01-01 2022-06-09             Delaware            1 FIPS:10
-    ## 9  1870-11-01 2022-06-07 District of Columbia            1 FIPS:11
-    ## 10 1871-09-12 2022-06-09              Florida            1 FIPS:12
-    ## 11 1849-01-01 2022-06-09              Georgia            1 FIPS:13
-    ## 12 1905-01-01 2022-06-09               Hawaii            1 FIPS:15
-    ## 13 1892-06-01 2022-06-09                Idaho            1 FIPS:16
-    ## 14 1870-10-15 2022-06-09             Illinois            1 FIPS:17
-    ## 15 1886-02-01 2022-06-09              Indiana            1 FIPS:18
-    ## 16 1888-06-01 2022-06-09                 Iowa            1 FIPS:19
-    ## 17 1857-04-01 2022-06-09               Kansas            1 FIPS:20
-    ## 18 1872-10-01 2022-06-09             Kentucky            1 FIPS:21
-    ## 19 1882-07-01 2022-06-09            Louisiana            1 FIPS:22
-    ## 20 1885-06-01 2022-06-09                Maine            1 FIPS:23
-    ## 21 1880-01-01 2022-06-09             Maryland            1 FIPS:24
-    ## 22 1831-02-01 2022-06-09        Massachusetts            1 FIPS:25
-    ## 23 1887-06-01 2022-06-09             Michigan            1 FIPS:26
-    ## 24 1886-01-01 2022-06-09            Minnesota            1 FIPS:27
-    ## 25 1891-01-01 2022-06-09          Mississippi            1 FIPS:28
-    ## 26 1890-01-01 2022-06-09             Missouri            1 FIPS:29
-    ## 27 1891-08-01 2022-06-09              Montana            1 FIPS:30
-    ## 28 1878-01-01 2022-06-09             Nebraska            1 FIPS:31
-    ## 29 1877-07-01 2022-06-09               Nevada            1 FIPS:32
-    ## 30 1868-01-01 2022-06-09        New Hampshire            1 FIPS:33
-    ## 31 1865-06-01 2022-06-09           New Jersey            1 FIPS:34
-    ## 32 1870-01-01 2022-06-09           New Mexico            1 FIPS:35
-    ## 33 1869-01-01 2022-06-09             New York            1 FIPS:36
-    ## 34 1869-03-01 2022-06-09       North Carolina            1 FIPS:37
-    ## 35 1891-07-01 2022-06-09         North Dakota            1 FIPS:38
-    ## 36 1871-01-01 2022-06-09                 Ohio            1 FIPS:39
-    ## 37 1870-04-01 2022-06-09             Oklahoma            1 FIPS:40
-    ## 38 1871-11-01 2022-06-09               Oregon            1 FIPS:41
-    ## 39 1849-04-01 2022-06-09         Pennsylvania            1 FIPS:42
-    ## 40 1893-01-01 2022-06-09         Rhode Island            1 FIPS:44
-    ## 41 1849-05-01 2022-06-09       South Carolina            1 FIPS:45
-    ## 42 1893-01-01 2022-06-09         South Dakota            1 FIPS:46
-    ## 43 1879-01-01 2022-06-09            Tennessee            1 FIPS:47
-    ## 44 1852-04-01 2022-06-09                Texas            1 FIPS:48
-    ## 45 1887-12-01 2022-06-09                 Utah            1 FIPS:49
-    ## 46 1883-12-01 2022-06-09              Vermont            1 FIPS:50
-    ## 47 1869-01-01 2022-06-09             Virginia            1 FIPS:51
-    ## 48 1856-01-01 2022-06-09           Washington            1 FIPS:53
-    ## 49 1854-01-01 2022-06-09        West Virginia            1 FIPS:54
-    ## 50 1869-01-01 2022-06-09            Wisconsin            1 FIPS:55
-    ## 51 1889-01-01 2022-06-09              Wyoming            1 FIPS:56
+    ## 1  1888-02-01 2022-06-20              Alabama            1 FIPS:01
+    ## 2  1893-09-01 2022-06-20               Alaska            1 FIPS:02
+    ## 3  1867-08-01 2022-06-20              Arizona            1 FIPS:04
+    ## 4  1871-07-01 2022-06-20             Arkansas            1 FIPS:05
+    ## 5  1850-10-01 2022-06-20           California            1 FIPS:06
+    ## 6  1852-10-01 2022-06-20             Colorado            1 FIPS:08
+    ## 7  1884-11-01 2022-06-20          Connecticut            1 FIPS:09
+    ## 8  1893-01-01 2022-06-20             Delaware            1 FIPS:10
+    ## 9  1870-11-01 2022-06-18 District of Columbia            1 FIPS:11
+    ## 10 1871-09-12 2022-06-20              Florida            1 FIPS:12
+    ## 11 1849-01-01 2022-06-20              Georgia            1 FIPS:13
+    ## 12 1905-01-01 2022-06-20               Hawaii            1 FIPS:15
+    ## 13 1892-06-01 2022-06-20                Idaho            1 FIPS:16
+    ## 14 1870-10-15 2022-06-20             Illinois            1 FIPS:17
+    ## 15 1886-02-01 2022-06-20              Indiana            1 FIPS:18
+    ## 16 1888-06-01 2022-06-20                 Iowa            1 FIPS:19
+    ## 17 1857-04-01 2022-06-20               Kansas            1 FIPS:20
+    ## 18 1872-10-01 2022-06-20             Kentucky            1 FIPS:21
+    ## 19 1882-07-01 2022-06-20            Louisiana            1 FIPS:22
+    ## 20 1885-06-01 2022-06-20                Maine            1 FIPS:23
+    ## 21 1871-01-01 2022-06-20             Maryland            1 FIPS:24
+    ## 22 1831-02-01 2022-06-20        Massachusetts            1 FIPS:25
+    ## 23 1887-06-01 2022-06-20             Michigan            1 FIPS:26
+    ## 24 1886-01-01 2022-06-20            Minnesota            1 FIPS:27
+    ## 25 1891-01-01 2022-06-20          Mississippi            1 FIPS:28
+    ## 26 1890-01-01 2022-06-20             Missouri            1 FIPS:29
+    ## 27 1891-08-01 2022-06-20              Montana            1 FIPS:30
+    ## 28 1878-01-01 2022-06-20             Nebraska            1 FIPS:31
+    ## 29 1877-07-01 2022-06-20               Nevada            1 FIPS:32
+    ## 30 1868-01-01 2022-06-20        New Hampshire            1 FIPS:33
+    ## 31 1865-06-01 2022-06-20           New Jersey            1 FIPS:34
+    ## 32 1870-01-01 2022-06-20           New Mexico            1 FIPS:35
+    ## 33 1869-01-01 2022-06-20             New York            1 FIPS:36
+    ## 34 1869-03-01 2022-06-20       North Carolina            1 FIPS:37
+    ## 35 1891-07-01 2022-06-20         North Dakota            1 FIPS:38
+    ## 36 1871-01-01 2022-06-20                 Ohio            1 FIPS:39
+    ## 37 1870-04-01 2022-06-20             Oklahoma            1 FIPS:40
+    ## 38 1871-11-01 2022-06-20               Oregon            1 FIPS:41
+    ## 39 1849-04-01 2022-06-20         Pennsylvania            1 FIPS:42
+    ## 40 1893-01-01 2022-06-20         Rhode Island            1 FIPS:44
+    ## 41 1849-05-01 2022-06-20       South Carolina            1 FIPS:45
+    ## 42 1893-01-01 2022-06-20         South Dakota            1 FIPS:46
+    ## 43 1879-01-01 2022-06-20            Tennessee            1 FIPS:47
+    ## 44 1852-04-01 2022-06-20                Texas            1 FIPS:48
+    ## 45 1887-12-01 2022-06-20                 Utah            1 FIPS:49
+    ## 46 1883-12-01 2022-06-20              Vermont            1 FIPS:50
+    ## 47 1869-01-01 2022-06-20             Virginia            1 FIPS:51
+    ## 48 1856-01-01 2022-06-20           Washington            1 FIPS:53
+    ## 49 1854-01-01 2022-06-20        West Virginia            1 FIPS:54
+    ## 50 1869-01-01 2022-06-20            Wisconsin            1 FIPS:55
+    ## 51 1889-01-01 2022-06-20              Wyoming            1 FIPS:56
     ## 
     ## attr(,"class")
     ## [1] "ncdc_locs"
@@ -295,11 +295,11 @@ Winter Temperature - WITEMP
     ## 
     ## $data
     ##                     uid    mindate    maxdate                        name
-    ## 1  gov.noaa.ncdc:C00861 1763-01-01 2022-06-06             Daily Summaries
+    ## 1  gov.noaa.ncdc:C00861 1763-01-01 2022-06-19             Daily Summaries
     ## 2  gov.noaa.ncdc:C00946 1763-01-01 2022-06-01 Global Summary of the Month
     ## 3  gov.noaa.ncdc:C00947 1763-01-01 2022-01-01  Global Summary of the Year
-    ## 4  gov.noaa.ncdc:C00345 1991-06-05 2022-06-07    Weather Radar (Level II)
-    ## 5  gov.noaa.ncdc:C00708 1994-05-20 2022-06-07   Weather Radar (Level III)
+    ## 4  gov.noaa.ncdc:C00345 1991-06-05 2022-06-18    Weather Radar (Level II)
+    ## 5  gov.noaa.ncdc:C00708 1994-05-20 2022-06-18   Weather Radar (Level III)
     ## 6  gov.noaa.ncdc:C00821 2010-01-01 2010-01-01     Normals Annual/Seasonal
     ## 7  gov.noaa.ncdc:C00823 2010-01-01 2010-12-31               Normals Daily
     ## 8  gov.noaa.ncdc:C00824 2010-01-01 2010-12-31              Normals Hourly
@@ -395,7 +395,8 @@ In a format suitable for use with the `rnoaa` package.
     # https://www.projectpro.io/recipes/append-output-from-for-loop-dataframe-r
 
     # Store all state codes in a dataframe
-    state_list <- ncdc_locs(locationcategoryid='ST', limit=52)$data %>% 
+    state_list <- ncdc_locs(locationcategoryid='ST', limit=52)$data 
+    state_list <- state_list %>% 
       select(name, id) %>% 
       rename(state = name, state_id = id)
 
@@ -601,7 +602,7 @@ markdown file.
 ## Combine precipitation data from all states.
 
     # https://statisticsglobe.com/merge-csv-files-in-r
-    unlink(c("prcp_data/prcp_all_states.csv"))
+    unlink(c("prcp_data/prcp_q_all_states.csv", "prcp_data/prcp_all_states.csv"))
     prcp <- list.files(path = "prcp_data/",  # Identify all CSV files
                            pattern = "*.csv", full.names = TRUE) %>% 
       lapply(read_csv) %>% bind_rows %>% select(-1) %>% dplyr::rename(prcp_mean = value.mean, prcp_sd = value.sd)
@@ -636,3 +637,29 @@ markdown file.
 
     write.csv(prcp_q, paste0("prcp_data/prcp_q_", "all_states", ".csv"))
     unlink("prcp_data/prcp_all_states.csv")
+
+## Merge both temperature and precitipation datasets with stressor data.
+
+    stressor <- stressor %>% 
+      mutate(quarter =
+        case_when(
+          months == "January-March" ~ paste0(substr(year, 3,4), "/01"),
+          months == "April-June" ~ paste0(substr(year, 3,4), "/02"),
+          months == "July-September" ~ paste0(substr(year, 3,4), "/03"),
+          months == "October-December" ~ paste0(substr(year, 3,4), "/04")
+        ))
+
+    stressor_climate <- left_join(avg_temp_q, stressor, by = c("quarter", "state"))
+
+    stressor_climate <- left_join(prcp_q, stressor_climate, by = c("quarter", "state"))
+
+    stressor_climate <- stressor_climate %>% 
+      mutate(quarter = case_when(months == "January-March" ~ 1, 
+                                 months == "April-June" ~ 2, 
+                                 months == "July-September" ~ 3, 
+                                 months == "October-December" ~ 4)) %>%
+      select(-months, -temp_sd, -prcp_sd) %>%
+      arrange(quarter) %>%
+      relocate(quarter, year, quarter, state, stressor, stress_pct, temp_mean, prcp_mean)
+
+    write.csv(stressor_climate, "stressor_climate.csv")
