@@ -1,3 +1,5 @@
+## Combine Data on Bee Colony Stressors and Climate
+
 This file was originally a part of a team project whose goal was to
 establish relationships among variables related to bee colony losses,
 bee colony stressors, and climate.
@@ -126,57 +128,57 @@ in:
     ## 
     ## $data
     ##       mindate    maxdate                 name datacoverage      id
-    ## 1  1888-02-01 2022-06-20              Alabama            1 FIPS:01
-    ## 2  1893-09-01 2022-06-20               Alaska            1 FIPS:02
-    ## 3  1867-08-01 2022-06-20              Arizona            1 FIPS:04
-    ## 4  1871-07-01 2022-06-20             Arkansas            1 FIPS:05
-    ## 5  1850-10-01 2022-06-20           California            1 FIPS:06
-    ## 6  1852-10-01 2022-06-20             Colorado            1 FIPS:08
-    ## 7  1884-11-01 2022-06-20          Connecticut            1 FIPS:09
-    ## 8  1893-01-01 2022-06-20             Delaware            1 FIPS:10
-    ## 9  1870-11-01 2022-06-18 District of Columbia            1 FIPS:11
-    ## 10 1871-09-12 2022-06-20              Florida            1 FIPS:12
-    ## 11 1849-01-01 2022-06-20              Georgia            1 FIPS:13
-    ## 12 1905-01-01 2022-06-20               Hawaii            1 FIPS:15
-    ## 13 1892-06-01 2022-06-20                Idaho            1 FIPS:16
-    ## 14 1870-10-15 2022-06-20             Illinois            1 FIPS:17
-    ## 15 1886-02-01 2022-06-20              Indiana            1 FIPS:18
-    ## 16 1888-06-01 2022-06-20                 Iowa            1 FIPS:19
-    ## 17 1857-04-01 2022-06-20               Kansas            1 FIPS:20
-    ## 18 1872-10-01 2022-06-20             Kentucky            1 FIPS:21
-    ## 19 1882-07-01 2022-06-20            Louisiana            1 FIPS:22
-    ## 20 1885-06-01 2022-06-20                Maine            1 FIPS:23
-    ## 21 1871-01-01 2022-06-20             Maryland            1 FIPS:24
-    ## 22 1831-02-01 2022-06-20        Massachusetts            1 FIPS:25
-    ## 23 1887-06-01 2022-06-20             Michigan            1 FIPS:26
-    ## 24 1886-01-01 2022-06-20            Minnesota            1 FIPS:27
-    ## 25 1891-01-01 2022-06-20          Mississippi            1 FIPS:28
-    ## 26 1890-01-01 2022-06-20             Missouri            1 FIPS:29
-    ## 27 1891-08-01 2022-06-20              Montana            1 FIPS:30
-    ## 28 1878-01-01 2022-06-20             Nebraska            1 FIPS:31
-    ## 29 1877-07-01 2022-06-20               Nevada            1 FIPS:32
-    ## 30 1868-01-01 2022-06-20        New Hampshire            1 FIPS:33
-    ## 31 1865-06-01 2022-06-20           New Jersey            1 FIPS:34
-    ## 32 1870-01-01 2022-06-20           New Mexico            1 FIPS:35
-    ## 33 1869-01-01 2022-06-20             New York            1 FIPS:36
-    ## 34 1869-03-01 2022-06-20       North Carolina            1 FIPS:37
-    ## 35 1891-07-01 2022-06-20         North Dakota            1 FIPS:38
-    ## 36 1871-01-01 2022-06-20                 Ohio            1 FIPS:39
-    ## 37 1870-04-01 2022-06-20             Oklahoma            1 FIPS:40
-    ## 38 1871-11-01 2022-06-20               Oregon            1 FIPS:41
-    ## 39 1849-04-01 2022-06-20         Pennsylvania            1 FIPS:42
-    ## 40 1893-01-01 2022-06-20         Rhode Island            1 FIPS:44
-    ## 41 1849-05-01 2022-06-20       South Carolina            1 FIPS:45
-    ## 42 1893-01-01 2022-06-20         South Dakota            1 FIPS:46
-    ## 43 1879-01-01 2022-06-20            Tennessee            1 FIPS:47
-    ## 44 1852-04-01 2022-06-20                Texas            1 FIPS:48
-    ## 45 1887-12-01 2022-06-20                 Utah            1 FIPS:49
-    ## 46 1883-12-01 2022-06-20              Vermont            1 FIPS:50
-    ## 47 1869-01-01 2022-06-20             Virginia            1 FIPS:51
-    ## 48 1856-01-01 2022-06-20           Washington            1 FIPS:53
-    ## 49 1854-01-01 2022-06-20        West Virginia            1 FIPS:54
-    ## 50 1869-01-01 2022-06-20            Wisconsin            1 FIPS:55
-    ## 51 1889-01-01 2022-06-20              Wyoming            1 FIPS:56
+    ## 1  1888-02-01 2022-06-22              Alabama            1 FIPS:01
+    ## 2  1893-09-01 2022-06-22               Alaska            1 FIPS:02
+    ## 3  1867-08-01 2022-06-22              Arizona            1 FIPS:04
+    ## 4  1871-07-01 2022-06-22             Arkansas            1 FIPS:05
+    ## 5  1850-10-01 2022-06-22           California            1 FIPS:06
+    ## 6  1852-10-01 2022-06-22             Colorado            1 FIPS:08
+    ## 7  1884-11-01 2022-06-22          Connecticut            1 FIPS:09
+    ## 8  1893-01-01 2022-06-22             Delaware            1 FIPS:10
+    ## 9  1870-11-01 2022-06-20 District of Columbia            1 FIPS:11
+    ## 10 1871-09-12 2022-06-22              Florida            1 FIPS:12
+    ## 11 1849-01-01 2022-06-22              Georgia            1 FIPS:13
+    ## 12 1905-01-01 2022-06-22               Hawaii            1 FIPS:15
+    ## 13 1892-06-01 2022-06-22                Idaho            1 FIPS:16
+    ## 14 1870-10-15 2022-06-22             Illinois            1 FIPS:17
+    ## 15 1886-02-01 2022-06-22              Indiana            1 FIPS:18
+    ## 16 1888-06-01 2022-06-22                 Iowa            1 FIPS:19
+    ## 17 1857-04-01 2022-06-22               Kansas            1 FIPS:20
+    ## 18 1872-10-01 2022-06-22             Kentucky            1 FIPS:21
+    ## 19 1882-07-01 2022-06-22            Louisiana            1 FIPS:22
+    ## 20 1885-06-01 2022-06-22                Maine            1 FIPS:23
+    ## 21 1871-01-01 2022-06-22             Maryland            1 FIPS:24
+    ## 22 1831-02-01 2022-06-22        Massachusetts            1 FIPS:25
+    ## 23 1887-06-01 2022-06-22             Michigan            1 FIPS:26
+    ## 24 1886-01-01 2022-06-22            Minnesota            1 FIPS:27
+    ## 25 1891-01-01 2022-06-22          Mississippi            1 FIPS:28
+    ## 26 1890-01-01 2022-06-22             Missouri            1 FIPS:29
+    ## 27 1891-08-01 2022-06-22              Montana            1 FIPS:30
+    ## 28 1878-01-01 2022-06-22             Nebraska            1 FIPS:31
+    ## 29 1877-07-01 2022-06-22               Nevada            1 FIPS:32
+    ## 30 1868-01-01 2022-06-22        New Hampshire            1 FIPS:33
+    ## 31 1865-06-01 2022-06-22           New Jersey            1 FIPS:34
+    ## 32 1870-01-01 2022-06-22           New Mexico            1 FIPS:35
+    ## 33 1869-01-01 2022-06-22             New York            1 FIPS:36
+    ## 34 1869-03-01 2022-06-22       North Carolina            1 FIPS:37
+    ## 35 1891-07-01 2022-06-22         North Dakota            1 FIPS:38
+    ## 36 1871-01-01 2022-06-22                 Ohio            1 FIPS:39
+    ## 37 1870-04-01 2022-06-22             Oklahoma            1 FIPS:40
+    ## 38 1871-11-01 2022-06-22               Oregon            1 FIPS:41
+    ## 39 1849-04-01 2022-06-22         Pennsylvania            1 FIPS:42
+    ## 40 1893-01-01 2022-06-22         Rhode Island            1 FIPS:44
+    ## 41 1849-05-01 2022-06-22       South Carolina            1 FIPS:45
+    ## 42 1893-01-01 2022-06-22         South Dakota            1 FIPS:46
+    ## 43 1879-01-01 2022-06-22            Tennessee            1 FIPS:47
+    ## 44 1852-04-01 2022-06-22                Texas            1 FIPS:48
+    ## 45 1887-12-01 2022-06-22                 Utah            1 FIPS:49
+    ## 46 1883-12-01 2022-06-22              Vermont            1 FIPS:50
+    ## 47 1869-01-01 2022-06-22             Virginia            1 FIPS:51
+    ## 48 1856-01-01 2022-06-22           Washington            1 FIPS:53
+    ## 49 1854-01-01 2022-06-22        West Virginia            1 FIPS:54
+    ## 50 1869-01-01 2022-06-22            Wisconsin            1 FIPS:55
+    ## 51 1889-01-01 2022-06-22              Wyoming            1 FIPS:56
     ## 
     ## attr(,"class")
     ## [1] "ncdc_locs"
@@ -295,11 +297,11 @@ Winter Temperature - WITEMP
     ## 
     ## $data
     ##                     uid    mindate    maxdate                        name
-    ## 1  gov.noaa.ncdc:C00861 1763-01-01 2022-06-19             Daily Summaries
+    ## 1  gov.noaa.ncdc:C00861 1763-01-01 2022-06-21             Daily Summaries
     ## 2  gov.noaa.ncdc:C00946 1763-01-01 2022-06-01 Global Summary of the Month
     ## 3  gov.noaa.ncdc:C00947 1763-01-01 2022-01-01  Global Summary of the Year
-    ## 4  gov.noaa.ncdc:C00345 1991-06-05 2022-06-18    Weather Radar (Level II)
-    ## 5  gov.noaa.ncdc:C00708 1994-05-20 2022-06-18   Weather Radar (Level III)
+    ## 4  gov.noaa.ncdc:C00345 1991-06-05 2022-06-20    Weather Radar (Level II)
+    ## 5  gov.noaa.ncdc:C00708 1994-05-20 2022-06-19   Weather Radar (Level III)
     ## 6  gov.noaa.ncdc:C00821 2010-01-01 2010-01-01     Normals Annual/Seasonal
     ## 7  gov.noaa.ncdc:C00823 2010-01-01 2010-12-31               Normals Daily
     ## 8  gov.noaa.ncdc:C00824 2010-01-01 2010-12-31              Normals Hourly
