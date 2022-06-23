@@ -5,6 +5,8 @@ date: '2022-04-22'
 output: md_document
 ---
 
+## Combine Data on Bee Colony Stressors and Climate
+
 This file was originally a part of a team project whose goal was to establish relationships among variables related to bee colony losses, bee colony stressors, and climate. 
 
 The data describing bee colonies come from the Bee Colonies dataset from [TidyTuesday](https://github.com/rfordatascience/tidytuesday/blob/master/data/2022/2022-01-11/readme.md#bee-colonies). This source has two datasets – related to colonies and stressors. The stressor dataset has 5 variables and 7,332 observations. Here are the explanations of variables in these two subsets:
